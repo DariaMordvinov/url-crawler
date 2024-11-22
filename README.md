@@ -49,7 +49,7 @@ If the URL is valid and Terms & condtitions link was found on the website, there
 2. Process PDF files in case Term & Conditions page exists in the pdf format.
 3.  Right now we only look for "terms" in the title of the link. We could optimize it to check for the other possible cases ("Conditions of use" / "Privacy Policy" / etc)
 4. We could start by checking robot.txt document first, though it's not a legal document but a policy for robots.
-5. Concentrate on bypassing anti-crawler software on the websites. For this we could use extra plugins for puppeteer, add delay between request to imitate human behavior, etc. However, if there is an anti-scraping software on the website, it is safe to assume the website prohibits web scraping. Also, we already send an error message that can possibly cover some of this cases ("The website probably uses anti-crawler software").
+5. Concentrate on bypassing anti-crawler software on the websites. For this we could use extra plugins for puppeteer, add user agent, add a delay between request to imitate human behavior, etc. However, if there is an anti-scraping software on the website, it is safe to assume the website prohibits web scraping. Also, we already send an error message that can possibly cover some of this cases ("The website probably uses anti-crawler software").
 
 
 

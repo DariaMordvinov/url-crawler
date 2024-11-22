@@ -8,9 +8,6 @@ const scrapeTerms = async (req, res, next) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    // to bypass anti-crawler validations that watch for valid user agent
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
-
     // Listen for console logs from the browser context
     // page.on('console', (msg) => {
     //   console.log('Browser log:', msg.text()); 
