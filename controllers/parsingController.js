@@ -38,7 +38,7 @@ const parseText = async (req, res, next) => {
                 ${text}
 
                 Please respond with one word in the following format:
-                "allow" | "prohibite" | "N/A"
+                "allow" | "prohibit" | "N/A"
                 "allow" means the terms explicitly permit web scraping. 
                 "prohibit" means the terms explicitly forbid web scraping. 
                 "N/A" means the terms do not mention web scraping or its permission explicitly. 
