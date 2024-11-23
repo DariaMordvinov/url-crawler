@@ -15,7 +15,11 @@ const trimText = (termsText) => {
     keywords.some(keyword => paragraph.toLowerCase().includes(keyword))
   );
 
-  return relevantParagraphs.join(' ').trim();
+  return relevantParagraphs
+    .map(paragraph => paragraph.trim())
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 const parseText = async (req, res, next) => {
@@ -64,4 +68,4 @@ const parseText = async (req, res, next) => {
   }
 };
 
-module.exports = { parseText };
+module.exports = { parseText, trimText };
