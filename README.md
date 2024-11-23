@@ -3,6 +3,7 @@
 ### How to start the server locally
 1. Copy this repository to your local machine.
 2. Obtain Gemini API key: https://ai.google.dev/aistudio (sign in and click "Get API key")
+3. Create .env file and paste your key there (check .env.example)
 
 ![Gemini Interface](./assets/gemini.png)
 
@@ -10,6 +11,13 @@
 ```
 npm i
 node index.js
+```
+4. Now you can send post requests to your local 3000 port at /scrape. Example:
+```
+curl -X POST -H "Content-Type: application/json" \
+-d '{"url": "https://www.example-site.com/"}' \
+http://localhost:3000/scrape
+
 ```
 
 ### Features
